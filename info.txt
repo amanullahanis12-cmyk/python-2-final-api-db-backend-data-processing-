@@ -1,0 +1,6 @@
+This is an API that retrieves information depending on the season you are looking for.
+ "https://www.thesportsdb.com/api/v1/json/123/lookuptable.php?l=4328&s={year} is the API being used to retrieve information from.
+After you start the python program enter valid years for a season and then exit out of graph and you will be given this link
+http://127.0.0.1:5000
+Enter this to see data- http://127.0.0.1:5000/api/v1/soccer
+control c to quit.
