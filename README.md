@@ -27,6 +27,17 @@ This program retrieves statistics for the top five soccer teams in the English P
 
 ---
 
+## API Source
+
+https://www.thesportsdb.com/api/v1/json/123/lookuptable.php?l=4328&s={year}
+text
+
+
+- League ID `4328` = English Premier League
+- Replace `{year}` with a season (e.g., `2023-2024`)
+
+---
+
 ## Features
 
 ### Data Retrieval (`class Info`)
@@ -71,7 +82,7 @@ python final.py
 
 Step 3: Enter a season
 
-When prompted, enter a season in the format YYYY-YYYY
+When prompted, enter a valid season in the format YYYY-YYYY
 
 Valid seasons from the code:
 
@@ -84,26 +95,24 @@ text
 
 What seasons do you want to see the top five teams in the table 2023-2024
 
-Step 4: View outputs
+Step 4: View the graph
 
-The program will:
+After entering a season, a matplotlib graph window will open with 4 bar charts. Close the graph window to continue.
+Step 5: Access the API
 
-    Fetch data from TheSportsDB API
+Once the graph is closed, the Flask server will start. Open your browser and go to:
+text
 
-    Display the raw JSON response
+http://127.0.0.1:5000
 
-    Create soccer_stats.db database
+To see the soccer data in JSON format, use:
+text
 
-    Show 4 bar charts (matplotlib window opens)
+http://127.0.0.1:5000/api/v1/soccer
 
-    Start a Flask server at http://127.0.0.1:5000
+Step 6: Stop the server
 
-Step 5: Use the API
-
-Once the server is running:
-Endpoint	Method	Description
-http://127.0.0.1:5000/	GET	HTML homepage
-http://127.0.0.1:5000/api/v1/soccer	GET	JSON data of top 5 teams
+Press Ctrl + C in the terminal to quit.
 API Response Example
 json
 
